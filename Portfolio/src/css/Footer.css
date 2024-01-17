@@ -1,0 +1,24 @@
+/* Footer.css */
+
+/* Footer container styles */
+footer {
+    background-color: #333; /* Background color for the footer */
+    padding: 20px 0; /* Vertical and horizontal padding */
+    text-align: center; /* Center-align text */
+    position:fixed;
+   left:0px;
+   bottom:0px;
+   width: 100%;
+}
+
+/* Footer link styles (adjust as needed) */
+footer a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Spacing between links */
+}
+
+/* Footer link hover styles (adjust as needed) */
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
