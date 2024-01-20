@@ -9,6 +9,8 @@ import "../css/style.css"
 const IndexPage = ({ data }) => {
   const { title, presentationText, headerImage } = data.allContentfulHomepage.edges[0].node;
 
+  console.log(data)
+
   return (
     <Layout>
       <HeroSection title={title} presentationText={presentationText} image={headerImage} />
@@ -30,7 +32,7 @@ export const query = graphql`
           title
           presentationText
           headerImage {
-            gatsbyImageData(layout: FULL_WIDTH, width: 1000, placeholder: BLURRED)}
+            gatsbyImage(layout: FULL_WIDTH, width: 500)}
         }
       }
     }

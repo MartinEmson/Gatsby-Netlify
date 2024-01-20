@@ -7,10 +7,10 @@ const HeroSection = ({ title, presentationText, headerImage }) => {
         <div className="hero-section">
             <div className="hero-content">
                 <div className="hero-image">
-                    {headerImage && headerImage.gatsbyImageData && (
+                    {headerImage && headerImage.gatsbyImage && (
                         <GatsbyImage
                             alt={title}
-                            image={headerImage.gatsbyImageData}
+                            image={headerImage.gatsbyImage}
 
                         />
                     )}

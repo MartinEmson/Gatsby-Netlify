@@ -1,3 +1,7 @@
+// require('dotenv').config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// });
+
 const path = require('path');
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -14,6 +18,8 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `);
+
+
   response.data.allContentfulBlogPost.edges.forEach((edge) => {
     createPage({
       path: `/portfolio/${edge.node.slug}`,

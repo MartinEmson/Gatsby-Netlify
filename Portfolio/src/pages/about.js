@@ -1,43 +1,48 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import Layout from '../components/layout'; // Import your layout component
-import Footer from '../components/Footer'; // Import your Footer component
-import '../css/style.css';
+// import React from 'react';
+// import { graphql, Link } from 'gatsby';
+// import Layout from '../components/layout';
+// import Footer from '../components/Footer';
+// import '../css/style.css';
 
-const about = () => {
-    return (
-        <Layout>
-            <div className="wrapper">
-                <main>
-                    <div className="wrapper">
-                        <div>
-                            <h2>Hello, I'm Martin!</h2>
-                            <p>I'm a front end student based in Stockholm. Welcome to my portfolio!</p>
-                            <button>View My Work</button>
-                        </div>
+// const About = ({ data }) => {
+//     const page = data.contentfulPage;
 
-                        <section className="skillsSection">
-                            <h2>My skills</h2>
-                            <ul className="skills">
-                                <li>HTML 5</li>
-                                <li>CSS</li>
-                                <li>Javascript</li>
-                                <li>React</li>
-                                <li>Wordpress</li>
-                                <li>HTML 5</li>
-                                <li>HTML 5</li>
-                                <li>HTML 5</li>
-                                <li>HTML 5</li>
-                                <li>HTML 5</li>
-                            </ul>
-                        </section>
-                    </div>
-                </main>
-                <Link to="/">Go back to the homepage</Link> {/* Link to the homepage */}
-            </div>
-            <Footer /> {/* Include the Footer component */}
-        </Layout>
-    );
-};
+//     return (
+//         <Layout>
+//             <div className="wrapper">
+//                 <main>
+//                     <div className="wrapper">
+//                         <div>
+//                             <h2>{page.title}</h2>
+//                             <p>{page.body.body}</p>
+//                             <Link to="/work" className="button" aria-label="View my work">View My Work</Link>
+//                         </div>
 
-export default about;
+//                         {/* ... other sections ... */}
+
+//                     </div>
+//                 </main>
+//                 <Link to="/" aria-label="Go back to the homepage">Go back to the homepage</Link>
+//             </div>
+//             <Footer />
+//         </Layout>
+//     );
+// };
+
+// export default About;
+
+// export const query = graphql`
+//   query AboutPageQuery {
+//     contentfulPage(slug: { eq: "about" }) {
+//       title
+//       body {
+//         body
+//       }
+//       pageImage {
+//         file {
+//           url
+//         }
+//       }
+//     }
+//   }
+// `;

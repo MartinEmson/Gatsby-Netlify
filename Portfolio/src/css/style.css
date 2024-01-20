@@ -90,33 +90,6 @@ main {
 
   }
 
-/* Navbar Styles */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20%;
-  background-color: #f4f4f4;
-}
-
-nav h1 {
-  color: #333;
-  font-size: 24px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: #333;
-  text-decoration: none;
-}
 
 /* Wrapper.css */
 .wrapper {
@@ -124,27 +97,4 @@ nav ul li a {
   max-width: 1200px; /* Or whatever max width you prefer */
   margin: 0 auto; /* Centers the wrapper */
 
-}
-
-#myLink {
-  font-size: 24px; /* Initial font size */
-  text-decoration: none; /* Remove underline by default */
-  color: #333;
-  transition: color 0.2s ease; /* Transition properties */
-}
-
-/* Define hover styles for the h1 element */
-#myLink a:hover {
-    color: #eb9cb3; /* Different text color on hover */
-}
-
-nav a {
-  display: inline-block;
-  transition: transform 0.4s ease;
-  transform-origin: bottom; /* Adjust the transform origin as needed */
-}
-
-/* Define hover styles for links */
-nav ul a:hover {
-  transform: scale(1.1); /* Increase size on hover */
 }

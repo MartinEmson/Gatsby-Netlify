@@ -6,8 +6,31 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 import Layout from "../components/layout"
 import "../css/style.css"
+import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
+//config ej fullständig, leta efter detta på nätet
+//config behövs för länkar, headings m.m.
+
 
 const SecondPage = () => {
+  const options = {
+    // renderMark: {
+    //   [MARKS.BOLD]: (text) => <b className="font-bold">{text}</b>,
+    // },
+    // renderNode: {
+    //   [INLINES.HYPERLINK]: (node, children) => {
+    //     const { url } = node.data
+    //     return (
+    //       <a href { url } className="underline">
+    //         {children}
+    //       </a>
+    //     )
+    //   }
+    // }
+
+  }
+
+
 
   const data = useStaticQuery(graphql`
     query {
