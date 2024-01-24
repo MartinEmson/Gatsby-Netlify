@@ -1,17 +1,19 @@
 import React from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import '../css/HeroSection.css';
 
-const HeroSection = ({ title, presentationText, headerImage }) => {
+const HeroSection = ({ title, presentationText, pageImage }) => {
+    // Ensure the image data is in the correct format for GatsbyImage
+    const image = getImage(pageImage);
+
     return (
         <div className="hero-section">
             <div className="hero-content">
                 <div className="hero-image">
-                    {headerImage && headerImage.gatsbyImage && (
+                    {image && (
                         <GatsbyImage
                             alt={title}
-                            image={headerImage.gatsbyImage}
-
+                            image={image}
                         />
                     )}
                 </div>
