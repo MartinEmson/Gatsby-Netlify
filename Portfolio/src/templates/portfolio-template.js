@@ -1,35 +1,42 @@
 import React from "react";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { Link } from "gatsby";
 import Layout from "../components/layout";
 import "../css/style.css";
 
-
 const PortfolioTemplate = ({ pageContext }) => {
-    const { portfolioItems } = pageContext; // Assuming portfolioItems is an array of items
+    console.log(pageContext); // Add this line to log the pageContext
+    const { portfolioItems } = pageContext;
+
+    console.log('Received Portfolio Items:', portfolioItems); // Log to verify data
+
+    if (!portfolioItems || portfolioItems.length === 0) {
+        return <p>No portfolio items found.</p>;
+    }
 
     return (
         <Layout>
             <div className="wrapper">
-                <h1 className="page-title">Hi from the Portfolio Page</h1>
                 <ul className="portfolio-list">
-                    {portfolioItems.map(({ id, title, pageImage }) => {
-                        const image = getImage(pageImage);
+                    {portfolioItems.map(({ slug, title, heroImage }) => {
+                        const image = getImage(heroImage);
                         return (
-                            <li key={id} className="portfolio-item">
+                            <li key={slug} className="portfolio-item">
                                 <h2 className="portfolio-item-title">{title}</h2>
                                 {image && (
-                                    <GatsbyImage
-                                        alt={title}
-                                        image={image}
-                                        className="portfolio-item-image"
-                                    />
+                                    <Link to={`/portfolio/${slug}`}>
+                                        <GatsbyImage
+                                            alt={title}
+                                            image={image}
+                                            className="portfolio-item-image"
+                                        />
+                                    </Link>
                                 )}
                             </li>
                         );
                     })}
                 </ul>
                 <p className="page-description">Welcome to the portfolio page</p>
-                {/* Back link, if needed */}
             </div>
         </Layout>
     );

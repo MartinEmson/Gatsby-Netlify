@@ -1,0 +1,68 @@
+/* About Page Styles */
+.wrapper.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .about-content .presentation {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+  }
+
+  .about-content .body {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007acc;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #005ea6;
+  }
+
+  /* Style for image (if using Gatsby Image) */
+  /* .gatsby-image-wrapper {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+  } */
+
+
+  /* Go back link */
+  a[aria-label="Go back to the homepage"] {
+    display: block;
+    margin-top: 2rem;
+    color: #007acc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a[aria-label="Go back to the homepage"]:hover {
+    color: #005ea6;
+  }

@@ -3,9 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/style.css';
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import useNavigation from "../hooks/use-navigation";
 
 
 const Layout = ({ children }) => (
+
   <>
     <NavBar />
     {/* <header><Link to="/">Gatsby ITHS-starter</Link></header> */}

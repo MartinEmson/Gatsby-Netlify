@@ -11,9 +11,9 @@ const HomeTemplate = ({ pageContext }) => {
         <Layout>
             <HeroSection
                 title={title}
-                pageImage={pageImage}
-            />            <div className="wrapper">
-                <Link to="/portfolio">Se min portfolio</Link>
+                pageImage={pageImage} />
+            <div className="wrapper">
+                <Link to="/portfolio">Se mitt portfolio</Link>
                 <section className="projects">
                     {/* Additional content here */}
                 </section>

@@ -1,196 +1,82 @@
-#menu__toggle {
-    opacity: 0;
-  }
-  #menu__toggle:checked + .menu__btn > span {
-    transform: rotate(45deg);
-  }
-  #menu__toggle:checked + .menu__btn > span::before {
-    top: 0;
-    transform: rotate(0deg);
-  }
-  #menu__toggle:checked + .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  #menu__toggle:checked ~ .menu__box {
-    left: 0 !important;
-  }
-  .menu__btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 26px;
-    height: 26px;
-    cursor: pointer;
-    z-index: 2;
-  }
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #fff; /* Adjust color as needed */
-    transition-duration: .25s;
-  }
-  .menu__btn > span::before {
-    content: '';
-    top: -8px;
-  }
-  .menu__btn > span::after {
-    content: '';
-    top: 8px;
-  }
-  .menu__box {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 300px;
-    height: 100%;
-    margin: 0;
-    padding: 80px 0;
-    list-style: none;
-    background-color: #141414;
-
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-    transition-duration: .25s;
-    z-index: 1;
-  }
-  .menu__item {
-    display: block;
-    padding: 12px 24px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    transition-duration: .25s;
-  }
-  .menu__item:hover {
-    background-color: #fff;
-  }
-
-  .menu__box li {
-    list-style: none;
-    margin: 0;
-    padding: 10px 20px; /* Adjust the padding as needed */
-  }
-
-  .menu__box a {
-    color: #fff; /* Adjust the color as needed */
-    font-size: 16px; /* Adjust the font size as needed */
-    font-weight: 400; /* Adjust the font weight as needed */
-    transition: transform 0.3s; /* Add a smooth transition effect on transform */
-
-  }
-
-  .menu__box a:hover {
-    transform: scale(1.1);
-
-  }
-
-
-  .menu__box--hidden {
-    display: none;
-}
-
-nav a {
-  display: inline-block;
-  transition: transform 0.4s ease;
-  transform-origin: bottom; /* Adjust the transform origin as needed */
-}
-
-/* Define hover styles for links */
-nav ul a:hover {
-  transform: scale(1.1); /* Increase size on hover */
-}
-
-#myLink {
-  font-size: 24px; /* Initial font size */
-  text-decoration: none; /* Remove underline by default */
-  color: #333;
-  transition: color 0.2s ease; /* Transition properties */
-}
-
-/* Define hover styles for the h1 element */
-#myLink a:hover {
-    color: #eb9cb3; /* Different text color on hover */
-}
-
-/* Navbar Styles */
+/* Global Navbar Styles */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20%;
+  padding: 10px 20%;
   background-color: #f4f4f4;
+  color: #333; /* Consolidated color */
 }
 
-nav h1 {
-  color: #333;
-  font-size: 24px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: #333;
+/* Link Styles */
+nav a, #myLink {
+  display: inline-block;
   text-decoration: none;
+  color: #333;
+  transition: transform 0.4s ease, color 0.2s ease;
 }
 
-
-nav {
-  color: #fff;
+#myLink {
+  font-size: 24px; /* Adjusted font size */
 }
 
-ul {
+/* Hover Styles */
+nav a:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+#myLink:hover {
+  color: #eb9cb3; /* Different text color on hover */
+}
+
+/* List and List Item Styles */
+nav ul, ul {
   list-style-type: none;
-  padding: 0;
   display: flex;
+  padding: 0;
   margin: 0;
 }
 
-li {
-  margin-right: 20px;
+nav ul li, li {
+  margin: 20px; /* Consolidated margin */
 }
 
-a {
-  text-decoration: none;
-  /* color: #fff; */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+  background: transparent;
 }
 
-a:hover {
-  text-decoration: underline;
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
 }
 
-/* Hide the hamburger menu on larger screens */
-@media (min-width: 768px) {
-    .hamburger-menu {
-        display: none;
-    }
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
 
-/* Style for mobile screens */
-@media (max-width: 767px) {
-    .menu__box {
-        display: none; /* Initially hidden */
-    }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    #menu__toggle:checked ~ .menu__box {
-        display: block; /* Show when toggled */
-    }
+  .nav-menu.open {
+    display: flex;
+  }
 
-    /* Add styles for your main menu items for mobile view */
-    .menu__box a {
-        display: block;
-        /* other styles */
-    }
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
 }

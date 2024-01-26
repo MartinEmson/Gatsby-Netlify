@@ -3,7 +3,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import '../css/HeroSection.css';
 
 const HeroSection = ({ title, presentationText, pageImage }) => {
-    // Ensure the image data is in the correct format for GatsbyImage
     const image = getImage(pageImage);
 
     return (
