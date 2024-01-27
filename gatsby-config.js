@@ -14,9 +14,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Netlify`,
-    description: `Portfolio`,
-    author: `Martin Lindevall`,
+    title: `Gatsby ITHS`,
+    description: `Enkel starter template för ITHS-studenter`,
+    author: `Håkan Gleissman`,
     siteUrl: `http://dummy-site.com`,
   },
   plugins: [
