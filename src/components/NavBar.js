@@ -18,16 +18,25 @@ const NavBar = () => {
     return (
         <nav>
             <a id="myLink" href="/">Emson.dev</a>
-            <ul className={isMenuOpen ? 'nav-menu open' : 'nav-menu'}>
-                {navigation.map(({ node }) => (
-                    <li key={node.url}>
-                        <Link to={`${node.url}`} activeClassName="active-link">
-                            {node.title}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+            <button onClick={toggleMenu} className="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div className={isMenuOpen ? 'nav-menu open' : 'nav-menu'}>
+                <button onClick={toggleMenu} className="close-btn">X</button>
+                <ul>
+                    {navigation.map(({ node }) => (
+                        <li key={node.url}>
+                            <Link to={`${node.url}`} activeClassName="active-link">
+                                {node.title}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </nav>
+
     );
 };
 

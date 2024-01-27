@@ -13,7 +13,7 @@ const HomeTemplate = ({ pageContext }) => {
                 title={title}
                 pageImage={pageImage} />
             <div className="wrapper">
-                <Link to="/portfolio">Se mitt portfolio</Link>
+                <Link to="/portfolio/">Se mitt portfolio</Link>
                 <section className="projects">
                     {/* Additional content here */}
                 </section>

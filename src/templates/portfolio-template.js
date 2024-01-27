@@ -5,11 +5,10 @@ import Layout from "../components/layout";
 import "../css/style.css";
 
 const PortfolioTemplate = ({ pageContext }) => {
-    console.log(pageContext); // Add this line to log the pageContext
+    console.log(pageContext);
     const { portfolioItems } = pageContext;
 
-    console.log('Received Portfolio Items:', portfolioItems); // Log to verify data
-
+    console.log('Received Portfolio Items:', portfolioItems);
     if (!portfolioItems || portfolioItems.length === 0) {
         return <p>No portfolio items found.</p>;
     }
