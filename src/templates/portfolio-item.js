@@ -4,14 +4,14 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Layout from "../components/layout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "../css/style.css"
-
+import "../css/item.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../css/style.css';
 
 export const query = graphql`
   query ($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
+      description
       heroImage {
         gatsbyImageData(layout: FULL_WIDTH, width: 700)
       }
@@ -21,7 +21,7 @@ export const query = graphql`
 `;
 
 const portfolioItem = (props) => {
-  const { title, heroImage } = props.data.contentfulBlogPost;
+  const { title, heroImage, description } = props.data.contentfulBlogPost;
 
   return (
     <Layout>
@@ -38,8 +38,8 @@ const portfolioItem = (props) => {
               alt={title} />
           )}
 
-          {/* Uncomment if using richtext */}
-          {/* <p>{renderRichText(richtext)}</p> */}
+          <p>{description}</p>
+
           <Link to="/portfolio/">Visit the Blog Page</Link>
         </div>
       </div>

@@ -17,7 +17,7 @@ const PortfolioTemplate = ({ pageContext }) => {
         <Layout>
             <div className="wrapper">
                 <ul className="portfolio-list">
-                    {portfolioItems.map(({ slug, title, heroImage }) => {
+                    {portfolioItems.map(({ slug, title, heroImage, description }) => {
                         const image = getImage(heroImage);
                         return (
                             <li key={slug} className="portfolio-item">

@@ -31,6 +31,7 @@ exports.createPages = async ({ graphql, actions }) => {
     slug: edge.node.slug,
     title: edge.node.title,
     heroImage: edge.node.heroImage.gatsbyImageData,
+    description: edge.node.description,
   }));
 
   console.log("Portfolio Items:", portfolioItems);

@@ -1,0 +1,28 @@
+.wrapper .content {
+    max-width: 800px; /* Adjust the width as needed */
+    margin: 0 auto; /* Centering the content */
+    padding: 20px;
+  }
+
+  .wrapper .content h1 {
+    font-size: 2rem; /* Adjust the font size as needed */
+    margin-bottom: 20px;
+  }
+
+  .wrapper .content .gatsby-image-wrapper {
+    max-width: 100%; /* Ensure image is not larger than its container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+  }
+
+  .wrapper .content a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333; /* Link color */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .wrapper .content a:hover {
+    color: #eb9cb3; /* Color change on hover */
+  }
